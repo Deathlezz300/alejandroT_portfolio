@@ -1,0 +1,65 @@
+.boxSectionProjects{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    flex-direction: column;
+}
+
+.boxGridProjects{
+    width: 65%;
+    padding-top: 1.2rem;
+    display: grid;
+    row-gap: 30px;
+    column-gap: 30px;
+    grid-template-columns: repeat(auto-fit,minmax(700px,1fr));
+}
+
+.boxEnlaceTodos{
+    padding-bottom: .5rem;
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.boxMainEnlaceTodos{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxMainEnlaceTodos::after{
+    content: '';
+    position: absolute;
+    width: 95%;
+    border-radius: 10px;
+    height: 3px;
+    left: 0;
+    background-color: #353849;
+    bottom: -1%;
+    transition: .2s all ease-in-out;
+    transform-origin: center;
+    transform: scale(0);
+}
+
+.boxMainEnlaceTodos:hover::after{
+    transform: scale(1);
+}
+
+.enlaceTodos{
+    margin-bottom: .1rem;
+    color: #353849;
+    font-weight: 600;
+    font-size: 1.105vw;
+    text-decoration: none;
+}
+
+.mainTitleProject{
+    color: #353849;
+    font-weight: 900;
+    font-size: 1.6rem;
+}

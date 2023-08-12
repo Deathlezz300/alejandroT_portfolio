@@ -1,0 +1,25 @@
+.boxSectionSkills{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    background-color: #F4F5F7;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.mainTitleSkills{
+    color: #353849;
+    font-weight: 900;
+    font-size: 1.6rem;
+}
+
+.boxGridSkills{
+    width: 65%;
+    display: grid;
+    grid-row-gap: 20px;
+    grid-column-gap: 25px;
+    grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+}

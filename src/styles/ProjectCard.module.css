@@ -1,0 +1,62 @@
+.boxProjectCard{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    padding-top: 2rem;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #F4F5F7;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.boxDataInfoProject{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    gap: 20px;
+}
+
+.boxTextProject{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.boxTecnologias{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;  
+}
+
+.projectImagen{
+    position: relative;
+    right: -8%;
+    width: 45%;
+    height: auto;
+    max-height: 230px;
+    border-top-left-radius: 10px;
+    filter: drop-shadow(0 0 5px #3a3a3a);
+    transition: .1s all ease;
+}
+
+.titleProjectPart{
+    color: #353849;
+    font-size: 1.6vw;
+    width: 100%;
+    text-align: left;
+}
+
+.descriptionProjectPart{
+    font-weight: 400;
+    color: #535353;
+    font-size: 1.3vw;
+}
