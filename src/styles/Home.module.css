@@ -30,7 +30,7 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    /* margin-right: 4rem; */
+    margin-right: 2.5rem;
     height: auto;
 }
 
@@ -58,7 +58,7 @@
 .textLink{
     color: black;
     font-weight: 600;
-    font-size: .9rem;
+    font-size: clamp(.9rem,1.1vw,.9rem);
 }
 
 .boxTextLink:hover{
@@ -82,7 +82,7 @@
     transform: scale(0);
     transform-origin: center;
     width: 103.5%;
-    height: 105%;
+    height: 107%;
     border: 2px solid rgb(51, 51, 51);
     border-radius: 8px;
 }

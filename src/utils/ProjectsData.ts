@@ -20,11 +20,12 @@ export interface tecnologia{
     imagen:StaticImageData
 }
  
-interface project{
+export interface project{
     titulo:string,
     imagen:StaticImageData,
     descripcionCorta:string,
-    tecnologias:tecnologia[]
+    tecnologias:tecnologia[],
+    tecnologiasFilter:string[]
 }
 
 export const DataProjects:project[]=[
@@ -39,9 +40,11 @@ export const DataProjects:project[]=[
             {titulo:'MongoDB',imagen:mongo},
             {titulo:'Socket.io',imagen:socket}
         ],
+        tecnologiasFilter:['react','node','typescript','tailwind','mongo'
+        ,'redux'],
         descripcionCorta:
         'ChatApp es una aplicación de mensajeria en tiempo real con todos'
-        +' los usuarios registrados en el sistema.'
+        +' los usuarios regi    strados en el sistema.'
     },
     {
         titulo:'Teslo Shop',
@@ -52,6 +55,7 @@ export const DataProjects:project[]=[
             {titulo:'Typescript',imagen:typescript},
             {titulo:'Material UI',imagen:mui}
         ],
+        tecnologiasFilter:['next','typescript','firebase','node','react'],
         descripcionCorta:'Teslo Shop es un clon de la pagina de Tesla,'
         +' en donde se puede realizar todas las acciones disponibles en un e-commerce.'
     },
@@ -64,6 +68,7 @@ export const DataProjects:project[]=[
             {titulo:'Tailwind',imagen:tailwind},
             {titulo:'Redux',imagen:redux}
         ],
+        tecnologiasFilter:['react','typescript','tailwind','redux'],
         descripcionCorta:'NewsApp es una pagina web que permite '
         +'buscar noticias de los temas que se desee, permitiendo al usuario filtrar la información por idioma.'
     },
@@ -77,6 +82,7 @@ export const DataProjects:project[]=[
             {titulo:'MongoDB',imagen:mongo},
             {titulo:'Redux',imagen:redux},
         ],
+        tecnologiasFilter:['react','node','css','mongo','redux','javascript'],
         descripcionCorta:'CalendarApp permite al usuario crear '
         +'recordatorios o eventos que tenga pendientes a realizar durante el transcurso del tiempo'
     }

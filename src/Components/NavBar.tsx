@@ -6,6 +6,7 @@ import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import { Reveal } from './Reveal';
 
 export const NavBar = () => {
   return (
@@ -13,35 +14,47 @@ export const NavBar = () => {
         <div className={styles['box-header']}>
 
         <div className={styles.boxName}>
-            <AccountCircleOutlinedIcon htmlColor='rgb(49,49,49)'/>
-            <h3 className={styles.titleName}>Alejandro Toledo</h3>
+            <Reveal>
+                <AccountCircleOutlinedIcon htmlColor='rgb(49,49,49)'/>
+            </Reveal>
+            <Reveal>
+                <h3 className={styles.titleName}>Alejandro Toledo</h3>
+            </Reveal>
         </div>
         <div className={styles.boxLinks}>
             <Link className={styles['box-link']}  href='/' color='none'>
                 <div className={styles.boxTextLink}>
-                    <span className={styles.textLink}>Home</span>
+                    <Reveal>
+                        <span className={styles.textLink}>Home</span>
+                    </Reveal>
                 </div>
             </Link>
-            <a className={styles['box-link']} href='#skills'>
+            <Link className={styles['box-link']} href='#skills'>
                 <div className={styles.boxTextLink}>
-                    <span className={styles.textLink}>Skills</span>
+                    <Reveal>
+                        <span className={styles.textLink}>Skills</span>
+                    </Reveal>
                 </div>
-            </a>
-            <a className={styles['box-link']} href='#projects'>
+            </Link>
+            <Link className={styles['box-link']} href='/projects'>
                 <div className={styles.boxTextLink}>
-                    <span className={styles.textLink}>Proyectos</span>
+                    <Reveal>
+                        <span className={styles.textLink}>Proyectos</span>
+                    </Reveal>
                 </div>
-            </a>
-            <a className={styles['box-link']} href='#contact'>
+            </Link>
+            <Link className={styles['box-link']} href='/#contacto'>
                 <div className={styles.boxTextLink}>
-                    <span className={styles.textLink}>Contacto</span>
+                    <Reveal>
+                        <span className={styles.textLink}>Contacto</span>
+                    </Reveal>
                 </div>
-            </a>
+            </Link>
         </div>
         <div className={styles.boxRedes}>
-                <a className={styles.linkRedes} href="https://github.com/Deathlezz300" target='_blank'><GitHubIcon htmlColor='#353849'/></a>
-                <a className={styles.linkRedes} href="https://www.linkedin.com/in/alejandro-tc/" target='_blank'><LinkedInIcon htmlColor='#353849'/></a>
-                <a className={styles.linkRedes} href="https://www.instagram.com/" target='_blank'><InstagramIcon htmlColor='#353849'/></a>                
+                <Reveal><a className={styles.linkRedes} href="https://github.com/Deathlezz300" target='_blank'><GitHubIcon htmlColor='#353849'/></a></Reveal>
+                <Reveal><a className={styles.linkRedes} href="https://www.linkedin.com/in/alejandro-tc/" target='_blank'><LinkedInIcon htmlColor='#353849'/></a></Reveal>
+                <Reveal><a className={styles.linkRedes} href="https://www.instagram.com/" target='_blank'><InstagramIcon htmlColor='#353849'/></a></Reveal>                
             </div>
         </div>
     </header>

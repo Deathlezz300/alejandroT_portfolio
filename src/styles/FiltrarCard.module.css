@@ -1,0 +1,15 @@
+.boxDivFiltrarCard{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    background-color: #F4F5F7;
+    padding: 11px;
+    max-height: 75px;
+}
+
+.imagenFiltrar{
+    width: clamp(50px,4vw,1000px);
+    height: auto;
+}

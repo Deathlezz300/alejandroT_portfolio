@@ -1,6 +1,7 @@
 import React,{FC} from 'react'
 import Image, { StaticImageData } from 'next/image'
 import styles from '../styles/SkillCard.module.css'
+import { Reveal } from './Reveal'
 
 
 interface props{
@@ -17,7 +18,8 @@ export const SkillCard:FC<props> = ({decision,image,color,texto}) => {
     }
   
     return (
-    <div className={styles.boxImageSkill}>
+    <Reveal clase={styles.boxReveal}  width='' >
+        <div className={styles.boxImageSkill}>
         <Image
             className={styles.imageSkill}
             src={image}
@@ -25,5 +27,6 @@ export const SkillCard:FC<props> = ({decision,image,color,texto}) => {
             style={{...demoStyles} as React.CSSProperties}/>
             <p style={{color}} className={styles.textoSkill}>{texto}</p>
     </div>
+    </Reveal>
   ) 
 }

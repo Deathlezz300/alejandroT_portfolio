@@ -1,0 +1,162 @@
+.input-group{
+    width: 100%;
+    position: relative;
+}
+
+.input-form{
+    width: 100%;
+    height: 3rem;
+    outline: none;
+    background: white;
+    border: none;
+    border-radius: 10px;
+    padding-left: 1rem;
+    font-size: 1rem;
+    color: #353849;
+    font-weight: 600;
+    transition: .2s ease-in-out;
+    border: .2px solid gray;
+}
+
+.label-input{
+    width: fit-content;
+    padding-left: .2rem;
+    padding-right: .2rem;
+    text-align: left;
+    position: absolute;
+    top: 13px;
+    left: 8px;
+    pointer-events: none;
+    color: #848586;
+    transition: .2s ease-in-out;
+    font-weight: 800;
+    border-radius: 100%;
+}
+
+.input-form:focus + .label-input,
+.input-form:not(:placeholder-shown) +
+.label-input{
+    top: -10px;
+    background: linear-gradient(180deg, rgb(243,244,246) 39%, rgb(255, 255, 255) 60%);
+    color: #353849;
+}
+
+.input-form:focus{
+    border: 2px solid #353849;
+    z-index: -1;
+}
+
+.boxSectionContact{
+    width: 100%;
+    background-color: #F3F4F6;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.boxFormContacto{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.titleContacto{
+    color: #353849;
+    font-weight: 800;
+    font-size: clamp(1.7rem,4vw,1.7rem);
+}
+
+.area-form{
+    width: 100%;
+    color: #353849;
+    height: 200px;
+    outline: none;
+    resize: none;
+    background: white;
+    border: none;
+    border-radius: 10px;
+    padding-left: .6rem;
+    padding-top: .6rem;
+    padding-right: .6rem;
+    font-size: 1rem;
+    text-align: justify;
+    font-weight: 600;
+    border: .2px solid gray;
+    transition: .2s ease-in-out;
+}
+
+.label-area{
+    width: fit-content;
+    padding-left: .2rem;
+    padding-right: .2rem;
+    text-align: left;
+    position: absolute;
+    top: 13px;
+    left: 8px;
+    pointer-events: none;
+    color: #848586;
+    transition: .2s ease-in-out;
+    font-weight: 800;
+    border-radius: 100%;
+}
+
+.area-form:focus + .label-area,
+.area-form:not(:placeholder-shown) +
+.label-area{
+    top: -10px;
+    background: linear-gradient(180deg, rgb(243,244,246) 39%, rgb(255, 255, 255) 60%);
+    color: #353849;
+}
+
+.area-form:focus{
+    border: 2px solid #353849;
+}
+
+.borderRed{
+    border: 2px solid rgb(173, 60, 60);
+}
+
+.labelError{
+    width: 100%;
+    margin-bottom: .5rem;
+    color: rgb(173, 60, 60);
+    margin-top: .2rem;
+    font-weight: 600;
+    margin-left: .3rem;
+}
+
+.botonEnviar{
+    position: relative;
+    width: 15%;
+    border-radius: 8px;
+    padding-top: 10px;
+    border: none;
+    padding-bottom: 10px;
+    font-size: clamp(1.1rem,1.3vw,1rem);
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.botonEnviar::after{
+    content: '';
+    position: absolute;
+    width: 102%;
+    height: 103%;
+    border: 2px solid #282a33;
+    left: -2.5%;
+    border-radius: 10px;
+    top: -7.5%;
+    transition: all .2s ease-in-out;
+    transform-origin: center;
+    transform: scale(0);
+}
+
+.botonEnviar:hover::after{
+    transform: scale(1);
+}
+

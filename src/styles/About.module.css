@@ -17,7 +17,7 @@
 
 .titleWebDeveloper{
     font-weight: 600;
-    font-size: 1.5vw;
+    font-size: clamp(1.2rem,1.5vw,1rem);
     color:  rgb(68, 68, 68);
 }
 
@@ -45,7 +45,7 @@
 .titleTrabajo{
     font-weight: 600;
     color: #0F9D5C;
-    font-size: 1.2vw;
+    font-size: clamp(1.1rem,1.2vw,1.1rem);
     position: relative;
 }
 
@@ -73,7 +73,7 @@
 }
 
 .boxDataMe{
-    width: 50%;
+    width: 52%;
     display: flex;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -84,7 +84,7 @@
 
 .titleDataMe{
     width: 100%;
-    font-size: 3.5vw;
+    font-size: clamp(2.1rem,3.5vw,1000px);
     font-weight: 800;
     color: #353849;
     text-align: left;
@@ -94,7 +94,7 @@
     text-align: justify;
     font-weight: 400;
     color: #535353;
-    font-size: 1.3vw;
+    font-size: clamp(.9rem,1.3vw,1000px);
     line-height: min(2vw,35px);
 }
 
@@ -105,7 +105,7 @@
     height: fit-content;
 }
 
-.boxImagen::before{
+/* .boxImagen::before{
     content: '';
     position: absolute;
     width: 103%;
@@ -115,7 +115,7 @@
     left: -3%;
     top: -3.5%;
     animation: spinner 2s linear infinite;
-}
+} */
 
 .buttonCV{
     position: relative;
@@ -129,6 +129,7 @@
     justify-content: center;
     align-items: center;
     gap: 2px;
+    margin-top: .5rem;
 }
 
 .buttonCV::after{
@@ -139,7 +140,7 @@
     width: 102%;
     height: 105%;
     border: 2px solid black;
-    top: -7.5%;
+    top: -7%;
     transition: .3s all ease-in-out;
     transform-origin: center;
     transform: scale(0);

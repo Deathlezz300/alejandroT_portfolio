@@ -55,6 +55,7 @@
     color: #353849;
     font-weight: 600;
     font-size: 1.105vw;
+    font-size: clamp(1rem,1.105vw,1rem);
     text-decoration: none;
 }
 
@@ -62,4 +63,11 @@
     color: #353849;
     font-weight: 900;
     font-size: 1.6rem;
+    font-size: clamp(1.7rem,4vw,1.7px);
+}
+
+.boxReveal{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
