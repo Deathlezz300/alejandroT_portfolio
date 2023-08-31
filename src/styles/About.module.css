@@ -73,7 +73,7 @@
 }
 
 .boxDataMe{
-    width: 52%;
+    width: 100%;
     display: flex;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -94,8 +94,8 @@
     text-align: justify;
     font-weight: 400;
     color: #535353;
-    font-size: clamp(.9rem,1.3vw,1000px);
-    line-height: min(2vw,35px);
+    font-size: clamp(1rem,1.3vw,1000px);
+    line-height: clamp(25px,2vw,1000px);
 }
 
 .boxImagen{
@@ -150,6 +150,7 @@
     transform: scale(1);
 }
 
+
 .perfilImage{
     width: 280px;
     height: auto;
@@ -157,6 +158,40 @@
     /* filter: drop-shadow(0 0 1rem #ff0000); */
 }
 
+@media screen and (max-width:1000px){
+    .boxInfoMe{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width:768px){
+    .boxInfoMe{
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .boxDataMe{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cambiarUbi{
+        display: flex;
+        order: 1;
+        width: 98% !important;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .titleDataMe{
+        font-size: clamp(2.1rem,3.5vw,1000px);
+        font-weight: 800;
+        color: #353849;
+        text-align: center;
+    }
+
+}
 
 @keyframes spinner {
     0%{

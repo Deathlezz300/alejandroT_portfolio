@@ -8,7 +8,7 @@ export const MainSlice = createSlice({
     },
     reducers: {
          FilterByTecnologia:(state,{payload}:{payload:string})=>{
-            state.proyectos=state.proyectos.filter(proyect=>{
+            state.proyectos=DataProjects.filter(proyect=>{
                 return proyect.tecnologiasFilter.includes(payload);
             })
          }

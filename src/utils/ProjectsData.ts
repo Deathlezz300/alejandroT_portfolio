@@ -14,6 +14,12 @@ import teslo from '../../public/images/teslo.webp';
 import mui from '../../public/images/mui.webp';
 import newsapp from '../../public/images/Newsapp.webp'
 import calendarapp from '../../public/images/calendar.webp'
+import pipos from '../../public/images/pipos.webp'
+import firebase from '../../public/images/firebase.webp'
+import giftexpertapp from '../../public/images/giftExpertApp.webp'
+import eduvet from '../../public/images/eduvet.webp'
+import eccomerce from '../../public/images/eccomerce.webp'
+import jorunal from '../../public/images/journal.webp'
 
 export interface tecnologia{
     titulo:string,
@@ -40,7 +46,7 @@ export const DataProjects:project[]=[
             {titulo:'MongoDB',imagen:mongo},
             {titulo:'Socket.io',imagen:socket}
         ],
-        tecnologiasFilter:['react','node','typescript','tailwind','mongo'
+        tecnologiasFilter:['react','node.js','typescript','tailwind','mongo'
         ,'redux'],
         descripcionCorta:
         'ChatApp es una aplicación de mensajeria en tiempo real con todos'
@@ -55,7 +61,7 @@ export const DataProjects:project[]=[
             {titulo:'Typescript',imagen:typescript},
             {titulo:'Material UI',imagen:mui}
         ],
-        tecnologiasFilter:['next','typescript','firebase','node','react'],
+        tecnologiasFilter:['next.js','typescript','node.js','react'],
         descripcionCorta:'Teslo Shop es un clon de la pagina de Tesla,'
         +' en donde se puede realizar todas las acciones disponibles en un e-commerce.'
     },
@@ -82,8 +88,65 @@ export const DataProjects:project[]=[
             {titulo:'MongoDB',imagen:mongo},
             {titulo:'Redux',imagen:redux},
         ],
-        tecnologiasFilter:['react','node','css','mongo','redux','javascript'],
+        tecnologiasFilter:['react','node.js','css','mongo','redux','javascript'],
         descripcionCorta:'CalendarApp permite al usuario crear '
         +'recordatorios o eventos que tenga pendientes a realizar durante el transcurso del tiempo'
+    },
+    {
+        titulo:'Pipos y Melosos',
+        imagen:pipos,
+        tecnologias:[
+            {titulo:'React',imagen:react},
+            {titulo:'CSS',imagen:css},
+            {titulo:'Firebase',imagen:firebase},
+            {titulo:'Redux',imagen:redux}
+        ],
+        tecnologiasFilter:['react','firebase','css','javascript','redux'],
+        descripcionCorta:'Pagina Web para la tienda Pipos y Melosos, en donde se evidencian los productos y modificar agregar y eliminar los mismos.'
+    },
+    {
+        titulo:'JournalApp',
+        imagen:jorunal,
+        tecnologias:[
+            {titulo:'React',imagen:react},
+            {titulo:'CSS',imagen:css},
+            {titulo:'Firebase',imagen:firebase},
+            {titulo:'Redux',imagen:redux},
+        ],
+        tecnologiasFilter:['react','redux','firebase','css','javascript'],
+        descripcionCorta:'Plataforma web para crear notas de manera sencilla y accesible en un solo lugar. Compatible con múltiples dispositivos, permitiendo un acceso fácil desde cualquier lugar'
+    },
+    {
+        titulo:'GiftExpertApp',
+        imagen:giftexpertapp,
+        tecnologias:[
+            {titulo:'React',imagen:react},
+            {titulo:'CSS',imagen:css}
+        ],
+        tecnologiasFilter:['react','css','javascript'],
+        descripcionCorta:'GiftExpertApp permite al usuario realizar busquedas de gifs con base al parametro ingresado en el buscador'
+    },
+    {
+        titulo:'EduvetQuiz',
+        imagen:eduvet,
+        tecnologias:[
+            {titulo:'React',imagen:react},
+            {titulo:'CSS',imagen:css},
+            {titulo:'Redux',imagen:redux}
+        ],
+        tecnologiasFilter:['react','css','javascript','redux'],
+        descripcionCorta:'Pagina Web para estudiantes de MVZ, Quiz sobre conocimientos para repasar sobre diversas tematicas y opciones para seleccionar del Quiz a realizar'
+    },
+    {
+        titulo:'Ecommerce fake',
+        imagen:eccomerce,
+        tecnologias:[
+            {titulo:'CSS',imagen:css},
+            {titulo:'Javascript',imagen:javascript}
+        ],
+        tecnologiasFilter:['css','javascript'],
+        descripcionCorta:'E-commerce consumiendo API para la obtención de la informacion , el administrador podrá insertar, eliminar y actualizar la informacion de los productos (CRUD).'
     }
+
+    
 ]

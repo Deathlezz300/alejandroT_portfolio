@@ -9,11 +9,14 @@
 }
 
 .boxGridProjects{
-    width: 65%;
+    width: fit-content;
+    max-width: 95%;
     padding-top: 1.2rem;
     display: grid;
+    justify-content: center;
     row-gap: 30px;
     column-gap: 30px;
+    place-content: center;
     grid-template-columns: repeat(auto-fit,minmax(700px,1fr));
 }
 
@@ -66,8 +69,12 @@
     font-size: clamp(1.7rem,4vw,1.7px);
 }
 
-.boxReveal{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+
+
+@media screen and (max-width:768px){
+    .boxGridProjects{
+        max-width: 90%;
+        width: fit-content;
+        grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    }
 }

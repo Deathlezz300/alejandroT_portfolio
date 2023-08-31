@@ -1,15 +1,17 @@
 import React,{FC,useRef,useEffect} from 'react'
 import {motion,useInView,useAnimation} from 'framer-motion'
+import { CssBaselineProps } from '@mui/material';
 
 interface props{
     children:JSX.Element | JSX.Element[],
     width?:'fit-content' | '100%' | string,
     padding?:string,
     clase?:string,
-    overflow?:string
+    overflow?:string,
+    css?:CssBaselineProps
 }
 
-export const Reveal:FC<props> = ({children,width="fit-content",padding,clase,overflow='hidden'}) => {
+export const Reveal:FC<props> = ({children,width="fit-content",padding,clase,overflow='hidden',css}) => {
   
     const ref=useRef(null);
   
@@ -24,7 +26,7 @@ export const Reveal:FC<props> = ({children,width="fit-content",padding,clase,ove
     },[isInView])
 
     return (
-    <div className={clase} ref={ref} style={{position:'relative',width,padding,overflow}}>
+    <div  className={clase} ref={ref} style={{position:'relative',width,padding,overflow}}>
         <motion.div
             variants={{
                 hidden:{opacity:0,y:75},

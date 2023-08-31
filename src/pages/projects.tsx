@@ -2,12 +2,16 @@ import React from 'react'
 import { NextPage } from 'next'
 import { MainLayout } from '@/Layout/MainLayout';
 import styles from '../styles/ProjectsPage.module.css'
-import { SkillsImages } from '@/utils/SkillsImages';
+import { SkillsImages, firebaseD } from '@/utils/SkillsImages';
 import { FiltrarCard } from '@/Components/FiltrarCard';
 import { DataProjects } from '@/utils/ProjectsData';
 import { ProjectCard } from '@/Components/ProjectCard';
 import {useSelector} from 'react-redux'
 import { RootState } from '@/store/store';
+
+let SkillsImage2=[...SkillsImages]
+SkillsImage2.pop()
+SkillsImage2.push(firebaseD)
 
  const ProjectsPage:NextPage = () => {
 
@@ -20,7 +24,7 @@ import { RootState } from '@/store/store';
             {/* <h3 className={styles.subtitleProjectsPage}>Filtrar por tecnologia</h3> */}
             <div className={styles.boxTecnologiasProjectPage}>
                 {
-                    SkillsImages.map(skill=>{
+                    SkillsImage2.map(skill=>{
                         return <FiltrarCard imagen={skill.image} texto={skill.texto} key={skill.texto}/>
                     })
                 }

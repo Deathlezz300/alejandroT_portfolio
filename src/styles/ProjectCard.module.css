@@ -1,5 +1,6 @@
 .boxProjectCard{
-    width: 100%;
+    width: fit-content;
+    max-width: 900px;   
     display: flex;
     gap: 10px;
     padding-top: 2rem;
@@ -9,8 +10,10 @@
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
+
 .boxProjectCard2{
-    width: 100%;
+    width: fit-content;
+    max-width: 450px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -58,7 +61,16 @@
     justify-content: left;
     align-items: center;
     gap: 10px;
-    width: 92%;  
+    width: 100%; 
+}
+
+.boxTecnologias2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+    width: 92%;         
 }
 
 .projectImagen{
@@ -97,7 +109,7 @@
 
 .titleProjectPart2{
     color: #353849;
-    font-size: 1.6vw;
+    font-size: clamp(1.5rem,1.4vw,2rem);
     width: 92%;
     text-align: left;
 }
@@ -106,6 +118,68 @@
     width: 92%;
     font-weight: 400;
     color: #535353;
-    font-size: clamp(1rem,1.3vw,1000px);
+    font-size: clamp(1.1rem,1.3vw,1.8rem);
 }
 
+@media screen and (max-width:768px) {
+
+    .titleProjectPart{
+        color: #353849;
+        font-size: clamp(1.5rem,1.4vw,2rem);
+        width: 92%;
+        text-align: left;
+    }
+    
+    .descriptionProjectPart{
+        width: 92%;
+        font-weight: 400;
+        color: #535353;
+        font-size: clamp(1.1rem,1.3vw,1.8rem);
+    }
+
+    .projectImagen{
+        order: -1;
+        width: 100%;
+        height: auto;
+        max-height: 230px;
+        border-top-left-radius: 10px;
+        filter: drop-shadow(0 0 5px #3a3a3a);
+        transition: .1s all ease;
+        right: 0;
+        filter: none;
+    }
+
+    .boxTecnologias{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        align-items: center;
+        gap: 10px;
+        width: 92%;         
+    }
+
+    .boxProjectCard{
+        width: fit-content;
+        max-width: 450px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        overflow: hidden;
+        border-radius: 10px;
+        background-color: #F4F5F7;
+        padding-top: 0;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    }
+
+    .boxDataInfoProject{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+        margin-left: 0;
+        gap: 20px;
+    }
+}

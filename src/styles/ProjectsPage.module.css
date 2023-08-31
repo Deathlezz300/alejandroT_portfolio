@@ -5,12 +5,11 @@
     justify-content: center;
     align-items: center;
     padding-top: 2rem;
+    padding-bottom: 2rem;
     gap: 20px;
 }
 
-.titleProjectsPage{
-    
-}
+
 
 .subtitleProjectsPage{
     width: 80%;
@@ -29,8 +28,19 @@
 
 .boxProjectPage{
     width: 90%;
+    margin-top: 2rem;
     row-gap: 20px;
     column-gap: 20px;
     display: grid;
+    height: auto;
+    justify-content: left;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+
+@media screen and (max-width:753px) {
+
+    .boxProjectPage{
+        width: fit-content;
+        max-width: 90%;
+    }
 }

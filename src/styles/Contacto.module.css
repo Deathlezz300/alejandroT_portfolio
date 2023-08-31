@@ -131,7 +131,7 @@
 
 .botonEnviar{
     position: relative;
-    width: 15%;
+    width: clamp(120px,15%,1000px);
     border-radius: 8px;
     padding-top: 10px;
     border: none;
@@ -158,5 +158,11 @@
 
 .botonEnviar:hover::after{
     transform: scale(1);
+}
+
+@media screen and (max-width:530px){
+    .boxFormContacto{
+        width: 90%;
+    }
 }
 

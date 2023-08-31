@@ -9,7 +9,7 @@ import { Reveal } from './Reveal'
 export const Projects = () => {
   return (
     <section className={styles.boxSectionProjects}>
-        <Reveal><h2 className={styles.mainTitleProject}>Proyectos</h2></Reveal>
+    <Reveal><h2 className={styles.mainTitleProject}>Proyectos</h2></Reveal>
         <div className={styles.boxEnlaceTodos}>
             <Reveal>
             <div className={styles.boxMainEnlaceTodos}>

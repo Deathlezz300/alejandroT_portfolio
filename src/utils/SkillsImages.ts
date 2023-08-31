@@ -8,6 +8,7 @@ import tailwind from '../../public/images/tailwind.webp'
 import css from '../../public/images/css.webp'
 import mysql from '../../public/images/mysql.webp';
 import {StaticImageData} from 'next/image'
+import firebase from '../../public/images/firebase.webp'
 
 interface imageData{
     image: StaticImageData,
@@ -61,5 +62,12 @@ export const SkillsImages:imageData[]=[
         texto:'MySQL'
     }
 ]
+
+
+ export const firebaseD:imageData={
+    image:firebase,
+    color:'#FDA511',
+    texto:'Firebase'
+ }
 
 
