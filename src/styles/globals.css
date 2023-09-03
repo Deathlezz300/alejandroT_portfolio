@@ -12,3 +12,7 @@ html{
 main{
   overflow-x: hidden;
 }
+
+.MuiCircularProgress-colorPrimary{
+  color: white;
+}

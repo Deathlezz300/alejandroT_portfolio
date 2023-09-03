@@ -1,7 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useEffect,useState } from 'react'
 import styles from '../styles/Contacto.module.css'
 import {useForm} from 'react-hook-form'
 import { Reveal } from './Reveal'
+import emailjs from '@emailjs/browser'
+import {toast,ToastContainer} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
+
 interface formData{
   name:string,
   correo:string,
@@ -13,12 +17,54 @@ export const Contact = () => {
   
   const {register,handleSubmit,formState:{errors},getValues}=useForm<formData>();
 
-  const onSubmitContact=(data:formData)=>{
-  
+  const [sending,SetSending]=useState<boolean>(false);
+
+  console.log(sending);
+
+  const onSubmitContact=async(data:formData)=>{
+
+
+      if(sending) return;
+
+      SetSending(true);
+
+      const serviceId=process.env.NEXT_PUBLIC_SERVICEID as string;
+      const templateId=process.env.NEXT_PUBLIC_TEMPLATEID as string;
+      const publicKey=process.env.NEXT_PUBLIC_APIKEY as string;
+
+
+      await emailjs.send(serviceId,templateId,data as any,publicKey)
+      .then(()=>{
+        toast.success('Correo enviado!', {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          });        
+      }).catch((error)=>{
+        toast.warn('Ha ocurrido un error', {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          });
+      })
+
+      SetSending(false);
+
   }
 
   return (
     <section  className={styles.boxSectionContact} id='contacto'>
+      <ToastContainer/>
       <Reveal><h2 className={styles.titleContacto}>Contacto</h2></Reveal>
         <form action="" onSubmit={handleSubmit(onSubmitContact)} className={styles.boxFormContacto}>
             <Reveal padding='7px 3px 3px 3px' width='100%'>
@@ -64,7 +110,12 @@ export const Contact = () => {
           </div>
           <label className={styles.labelError} style={{display:errors.mensaje ? 'block' : 'none'}} htmlFor="">{errors.mensaje?.message}</label>
           
-            <button className={styles.botonEnviar} type='submit'>Enviar</button>
+            <div className={styles.boxButton}>
+              {
+                sending===false ? <button disabled={sending} className={styles.botonEnviar} type='submit'>Enviar</button>:
+                <span className={styles.loader}></span>
+              }
+            </div>
             </Reveal>
         </form>        
     </section>
