@@ -19,8 +19,6 @@ export const Contact = () => {
 
   const [sending,SetSending]=useState<boolean>(false);
 
-  console.log(sending);
-
   const onSubmitContact=async(data:formData)=>{
 
 
@@ -40,7 +38,7 @@ export const Contact = () => {
           autoClose: 3000,
           hideProgressBar: false,
           closeOnClick: true,
-          pauseOnHover: true,
+          pauseOnHover: false,
           draggable: true,
           progress: undefined,
           theme: "dark",
@@ -51,7 +49,7 @@ export const Contact = () => {
           autoClose: 3000,
           hideProgressBar: false,
           closeOnClick: true,
-          pauseOnHover: true,
+          pauseOnHover: false,
           draggable: true,
           progress: undefined,
           theme: "dark",

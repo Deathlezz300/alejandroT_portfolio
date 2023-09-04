@@ -1,0 +1,68 @@
+.box-link{
+    text-decoration: none;
+}
+
+.boxSectionSide{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    z-index: 5;
+    transition: .4s ease-in-out all;
+    transform-origin: left;
+    transform: translateX(-100%);
+}
+
+.boxSectionSideCambiar{
+    transform: translateX(0%) !important;
+}
+
+.boxRedes{
+    display: flex;
+    width: 100%;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.linkRedes{
+    text-decoration: none;
+    color: #353849;
+}
+
+.boxSideLinks{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.textLinkSide{
+    position: relative;
+    color: black;
+    font-weight: 600;
+    font-size: clamp(1.5rem,4.2vw,1000px);
+}
+
+.textLinkSide::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -3%;
+    height: 3px;
+    background-color: black;
+    transform-origin: center;
+    transition: .2s all ease-in-out;
+    transform: scaleX(0);
+}
+
+.textLinkSide:hover::after{
+    transform: scaleX(1);
+}

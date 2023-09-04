@@ -16,7 +16,7 @@
     position: fixed;
     height: 50px;
     background-color: white;
-    z-index: 20;
+    z-index: 6;
 }
 
 .boxDivMainHeader{
@@ -102,4 +102,15 @@
 .linkRedes{
     text-decoration: none;
     color: #353849;
+}
+
+@media  screen and (max-width:678px) {
+    .boxLinks{
+        display: none;
+    }
+
+    .boxRedes{
+        display: none;
+    }
+
 }

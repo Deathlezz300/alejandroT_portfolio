@@ -34,7 +34,7 @@ export const About = () => {
                             Descargar cv</a>
                 </div>
             </Reveal>
-            <Reveal width='fit-content'>
+            <Reveal clase={`${styles.boxRevealImagen}`}>
                 <Image className={styles.perfilImage} src={perfil} alt=''/>
             </Reveal>
         </div>

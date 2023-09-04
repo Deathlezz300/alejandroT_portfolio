@@ -98,11 +98,10 @@
     line-height: clamp(25px,2vw,1000px);
 }
 
-.boxImagen{
-    position: relative;
-    border-radius: 100%;
-    width: fit-content;
-    height: fit-content;
+.boxRevealImagen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* .boxImagen::before{
@@ -152,7 +151,7 @@
 
 
 .perfilImage{
-    width: 280px;
+    width: clamp(280px,25vw,400px);
     height: auto;
     border-radius: 100%;
     /* filter: drop-shadow(0 0 1rem #ff0000); */
@@ -160,11 +159,12 @@
 
 @media screen and (max-width:1000px){
     .boxInfoMe{
-        width: 95%;
+        width: 100%;
+        gap: 7px;
     }
 }
 
-@media screen and (max-width:768px){
+@media screen and (max-width:678px){
     .boxInfoMe{
         flex-direction: column;
         gap: 0px;
@@ -172,8 +172,10 @@
 
     .boxDataMe{
         width: 100%;
+        margin-left: .3rem;
         justify-content: center;
         align-items: center;
+        gap: 15px;
     }
 
     .cambiarUbi{
@@ -189,6 +191,10 @@
         font-weight: 800;
         color: #353849;
         text-align: center;
+    }
+
+    .textDataMe{
+        width: 95%;
     }
 
 }

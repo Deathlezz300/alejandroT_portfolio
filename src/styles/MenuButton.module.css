@@ -1,0 +1,41 @@
+.buttonMenu{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 0;
+    background: transparent;
+    gap: .45rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.buttonMenu>div{
+    background-color: black;
+    height: 2px;
+    width: 100%;
+    border-radius: 5px;
+    transition: all .5s ;
+    transform-origin: left;
+}
+
+.palo1{
+    transform: rotate(50deg);
+}
+
+.palo2{
+    opacity: 0;
+}
+
+.palo3{
+    transform: rotate(-50deg);
+}
+
+@media screen and (max-width:678px) {
+    .buttonMenu{
+        display: flex;
+    }
+}

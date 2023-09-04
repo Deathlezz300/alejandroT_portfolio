@@ -1,6 +1,7 @@
 import { NavBar } from '@/Components/NavBar'
 import Head from 'next/head'
 import React,{FC} from 'react'
+import { SideBar } from '@/Components/SideBar'
 
 interface props{
     title:string,
@@ -17,6 +18,7 @@ export const MainLayout:FC<props> = ({title,description,children}) => {
             <meta name='og:title' content={title}/>
             <meta name='og:image' content=''/>
         </Head>
+        <SideBar/>
         <NavBar/>
         <main>
             {children}

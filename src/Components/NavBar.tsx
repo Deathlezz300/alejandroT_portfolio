@@ -7,8 +7,14 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { Reveal } from './Reveal';
+import { MenuButton } from './MenuButton';
+import { useSelector } from 'react-redux';
+import { RootState } from '@/store/store';
 
 export const NavBar = () => {
+
+  const {showMenu}=useSelector((state:RootState)=>state.main);
+
   return (
     <header className={styles.boxDivMainHeader}>
         <div className={styles['box-header']}>
@@ -51,11 +57,12 @@ export const NavBar = () => {
                 </div>
             </Link>
         </div>
-        <div className={styles.boxRedes}>
+            <MenuButton/>
+            <div className={styles.boxRedes}>
                 <Reveal><a className={styles.linkRedes} href="https://github.com/Deathlezz300" target='_blank'><GitHubIcon htmlColor='#353849'/></a></Reveal>
                 <Reveal><a className={styles.linkRedes} href="https://www.linkedin.com/in/alejandro-tc/" target='_blank'><LinkedInIcon htmlColor='#353849'/></a></Reveal>
                 <Reveal><a className={styles.linkRedes} href="https://www.instagram.com/" target='_blank'><InstagramIcon htmlColor='#353849'/></a></Reveal>                
-            </div>
+            </div>        
         </div>
     </header>
   )
