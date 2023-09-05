@@ -27,6 +27,7 @@ export const NavBar = () => {
                 <h3 className={styles.titleName}>Alejandro Toledo</h3>
             </Reveal>
         </div>
+        <div style={{flexGrow:1}}></div>
         <div className={styles.boxLinks}>
             <Link className={styles['box-link']}  href='/' color='none'>
                 <div className={styles.boxTextLink}>
@@ -57,6 +58,7 @@ export const NavBar = () => {
                 </div>
             </Link>
         </div>
+        <div style={{flexGrow:1}}></div>
             <MenuButton/>
             <div className={styles.boxRedes}>
                 <Reveal><a className={styles.linkRedes} href="https://github.com/Deathlezz300" target='_blank'><GitHubIcon htmlColor='#353849'/></a></Reveal>
