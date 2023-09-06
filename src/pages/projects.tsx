@@ -18,7 +18,7 @@ SkillsImage2.push(firebaseD)
     const {proyectos}=useSelector((state:RootState)=>state.main);
 
   return (
-    <MainLayout title='Proyectos' description='Proyectos portafolio Alejandro Toledo'>
+    <MainLayout title='Proyectos' description='Proyectos portafolio web Alejandro Toledo'>
         <section className={styles.boxSectionProjectPage}>
             <h1 className={styles.titleProjectsPage}>Todos los proyectos</h1>
             {/* <h3 className={styles.subtitleProjectsPage}>Filtrar por tecnologia</h3> */}
@@ -32,7 +32,7 @@ SkillsImage2.push(firebaseD)
             <div className={styles.boxProjectPage}>
                 {
                     proyectos.map(proje=>{
-                        return <ProjectCard key={proje.titulo} titulo={proje.titulo} imagen={proje.imagen}
+                        return <ProjectCard key={proje.titulo} url={proje.url} titulo={proje.titulo} imagen={proje.imagen}
                         descripcionCorta={proje.descripcionCorta} decision={true} tecnologias={proje.tecnologias}/>
                     })
                 }

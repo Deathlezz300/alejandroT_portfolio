@@ -20,6 +20,7 @@ import giftexpertapp from '../../public/images/giftExpertApp.webp'
 import eduvet from '../../public/images/eduvet.webp'
 import eccomerce from '../../public/images/eccomerce.webp'
 import jorunal from '../../public/images/journal.webp'
+import { url } from 'inspector'
 
 export interface tecnologia{
     titulo:string,
@@ -31,7 +32,8 @@ export interface project{
     imagen:StaticImageData,
     descripcionCorta:string,
     tecnologias:tecnologia[],
-    tecnologiasFilter:string[]
+    tecnologiasFilter:string[],
+    url:string
 }
 
 export const DataProjects:project[]=[
@@ -50,7 +52,8 @@ export const DataProjects:project[]=[
         ,'redux'],
         descripcionCorta:
         'ChatApp es una aplicación de mensajeria en tiempo real con todos'
-        +' los usuarios regi    strados en el sistema.'
+        +' los usuarios regi    strados en el sistema.',
+        url:'https://chatapp-300.netlify.app/login'
     },
     {
         titulo:'Teslo Shop',
@@ -63,7 +66,8 @@ export const DataProjects:project[]=[
         ],
         tecnologiasFilter:['next.js','typescript','node.js','react'],
         descripcionCorta:'Teslo Shop es un clon de la pagina de Tesla,'
-        +' en donde se puede realizar todas las acciones disponibles en un e-commerce.'
+        +' en donde se puede realizar todas las acciones disponibles en un e-commerce.',
+        url:'https://teslo-shop-gilt.vercel.app/'
     },
     {
         titulo:'NewsApp',
@@ -76,7 +80,8 @@ export const DataProjects:project[]=[
         ],
         tecnologiasFilter:['react','typescript','tailwind','redux'],
         descripcionCorta:'NewsApp es una pagina web que permite '
-        +'buscar noticias de los temas que se desee, permitiendo al usuario filtrar la información por idioma.'
+        +'buscar noticias de los temas que se desee, permitiendo al usuario filtrar la información por idioma.',
+        url:'https://drive.google.com/file/d/1Ln53joEGgxa-I3DgbFdph02_QbJMpBqY/view'
     },
     {
         titulo:'CalendarApp',
@@ -90,7 +95,8 @@ export const DataProjects:project[]=[
         ],
         tecnologiasFilter:['react','node.js','css','mongo','redux','javascript'],
         descripcionCorta:'CalendarApp permite al usuario crear '
-        +'recordatorios o eventos que tenga pendientes a realizar durante el transcurso del tiempo'
+        +'recordatorios o eventos que tenga pendientes a realizar durante el transcurso del tiempo',
+        url:'https://calendar-app-react30.netlify.app/auth/login'
     },
     {
         titulo:'Pipos y Melosos',
@@ -103,6 +109,7 @@ export const DataProjects:project[]=[
         ],
         tecnologiasFilter:['react','firebase','css','javascript','redux'],
         descripcionCorta:'Pagina Web para la tienda Pipos y Melosos, en donde se evidencian los productos y modificar agregar y eliminar los mismos.'
+        ,url:'https://piposymelosos.netlify.app/home'
     },
     {
         titulo:'JournalApp',
@@ -115,6 +122,7 @@ export const DataProjects:project[]=[
         ],
         tecnologiasFilter:['react','redux','firebase','css','javascript'],
         descripcionCorta:'Plataforma web para crear notas de manera sencilla y accesible en un solo lugar. Compatible con múltiples dispositivos, permitiendo un acceso fácil desde cualquier lugar'
+        ,url:'https://journal-app-react23.netlify.app/auth/login'
     },
     {
         titulo:'GiftExpertApp',
@@ -125,6 +133,7 @@ export const DataProjects:project[]=[
         ],
         tecnologiasFilter:['react','css','javascript'],
         descripcionCorta:'GiftExpertApp permite al usuario realizar busquedas de gifs con base al parametro ingresado en el buscador'
+        ,url:'https://deathlezz300.github.io/GiftExpertApp/'
     },
     {
         titulo:'EduvetQuiz',
@@ -136,6 +145,7 @@ export const DataProjects:project[]=[
         ],
         tecnologiasFilter:['react','css','javascript','redux'],
         descripcionCorta:'Pagina Web para estudiantes de MVZ, Quiz sobre conocimientos para repasar sobre diversas tematicas y opciones para seleccionar del Quiz a realizar'
+        ,url:'https://eduvetquiz.netlify.app/login'
     },
     {
         titulo:'Ecommerce fake',
@@ -146,6 +156,7 @@ export const DataProjects:project[]=[
         ],
         tecnologiasFilter:['css','javascript'],
         descripcionCorta:'E-commerce consumiendo API para la obtención de la informacion , el administrador podrá insertar, eliminar y actualizar la informacion de los productos (CRUD).'
+        ,url:'https://deathlezz300.github.io/Challenge-e-commerce/'
     }
 
     

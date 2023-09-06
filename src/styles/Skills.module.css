@@ -19,6 +19,7 @@
 .boxGridSkills{
     width: 65%;
     display: grid;
+    place-items: center;
     grid-row-gap: 20px;
     grid-column-gap: 25px;
     grid-template-columns: repeat(auto-fit,minmax(100px,1fr));

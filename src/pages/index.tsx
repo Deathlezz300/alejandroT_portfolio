@@ -8,7 +8,7 @@ import { Contact } from '@/Components/Contact';
 
 export const HomePage:NextPage = () => {
   return (
-    <MainLayout title='Home' description='pagina inicio para portafolio alejandro toledo'>
+    <MainLayout title='Inicio' description='Portafolio Web Alejandro Toledo'>
       <About/>
       <Skills/>
       <Projects/>

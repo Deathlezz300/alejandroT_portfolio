@@ -21,7 +21,7 @@ export const Projects = () => {
         <div className={styles.boxGridProjects}>
             {
                 DataProjects.map((proyecto,index)=>{
-                    return index<4 ? <ProjectCard decision={false} key={index} titulo={proyecto.titulo} imagen={proyecto.imagen}
+                    return index<4 ? <ProjectCard url={proyecto.url} decision={false} key={index} titulo={proyecto.titulo} imagen={proyecto.imagen}
                     descripcionCorta={proyecto.descripcionCorta} tecnologias={proyecto.tecnologias}/> : ''
                 })
             }

@@ -7,31 +7,35 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { useSelector } from 'react-redux';
 import { RootState } from '@/store/store';
+import { toogleMenu } from '@/store/MainSlice';
+import { useDispatch } from 'react-redux';
 
 export const SideBar = () => {
 
+
+  const dispatch=useDispatch();
 
   const {showMenu}=useSelector((state:RootState)=>state.main);
 
   return (
     <section className={`${styles.boxSectionSide} ${showMenu ? styles.boxSectionSideCambiar : ''}`}>
             <div className={styles.boxSideLinks}>
-                <Link className={styles['box-link']}  href='/' color='none'>
+                <Link onClick={()=>dispatch(toogleMenu())} className={styles['box-link']}  href='/' color='none'>
                         <Reveal>
                             <span className={styles.textLinkSide}>Home</span>
                         </Reveal>
                 </Link>
-                <Link className={styles['box-link']} href='#skills'>
+                <Link onClick={()=>dispatch(toogleMenu())} className={styles['box-link']} href='#skills'>
                         <Reveal>
                             <span className={styles.textLinkSide}>Skills</span>
                         </Reveal>
                 </Link>
-                <Link className={styles['box-link']} href='/projects'>
+                <Link onClick={()=>dispatch(toogleMenu())} className={styles['box-link']} href='/projects'>
                         <Reveal>
                             <span className={styles.textLinkSide}>Proyectos</span>
                         </Reveal>
                 </Link>
-                <Link className={styles['box-link']} href='/#contacto'>
+                <Link onClick={()=>dispatch(toogleMenu())} className={styles['box-link']} href='/#contacto'>
                         <Reveal>
                             <span className={styles.textLinkSide}>Contacto</span>
                         </Reveal>

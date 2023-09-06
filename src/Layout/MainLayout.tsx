@@ -9,14 +9,18 @@ interface props{
     children:JSX.Element | JSX.Element[]
 }
 
+const origin=(typeof window==='undefined' ? '' : window.location.origin);
+const fullUrl=(typeof window==='undefined' ? '' : window.location);
+
 export const MainLayout:FC<props> = ({title,description,children}) => {
   return (
     <>
         <Head>
             <title>{title}</title>
-            <meta name='description' content={description}/>
-            <meta name='og:title' content={title}/>
-            <meta name='og:image' content=''/>
+            <meta property='og:description' name='description' content={description}/>
+            <meta property='og:title' content={title}/>
+            <meta property='og:image' content={`${origin}/images/imagen_portfolio.png`}/>
+            <meta property='og:url' content={`${fullUrl}`}/>
         </Head>
         <SideBar/>
         <NavBar/>

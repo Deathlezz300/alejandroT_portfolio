@@ -4,7 +4,6 @@ import { tecnologia } from '@/utils/ProjectsData'
 import styles from '../styles/ProjectCard.module.css'
 import Image from 'next/image'
 import { TecnologiaCard } from './TecnologiaCard'
-import Link from 'next/link'
 import { Reveal } from './Reveal'
 import { CssBaselineProps } from '@mui/material'
 
@@ -13,14 +12,15 @@ interface props{
     imagen:StaticImageData,
     descripcionCorta:string,
     tecnologias:tecnologia[],
-    decision:boolean
+    decision:boolean,
+    url:string
 }
 
 
 
-export const ProjectCard:FC<props> = ({titulo,imagen,descripcionCorta,tecnologias,decision}) => {
+export const ProjectCard:FC<props> = ({titulo,imagen,descripcionCorta,tecnologias,decision,url}) => {
   return (
-    <Link  href={`/projects/${titulo}`} style={{textDecoration:'none',color:'black',width:'fit-content'}}>
+    <a  href={url} target='_blank' style={{textDecoration:'none',color:'black',width:'fit-content'}}>
         <Reveal   padding='0 0 10px 0' >
             <div className={`${decision ? styles.boxProjectCard2 : styles.boxProjectCard}`}>
                 <div className={`${decision ? styles.boxDataInfoProject2 : styles.boxDataInfoProject}`}>
@@ -42,6 +42,6 @@ export const ProjectCard:FC<props> = ({titulo,imagen,descripcionCorta,tecnologia
                         alt=''/>
             </div>
         </Reveal>
-    </Link>
+    </a>
   )
 }

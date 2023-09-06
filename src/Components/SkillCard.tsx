@@ -18,7 +18,7 @@ export const SkillCard:FC<props> = ({decision,image,color,texto}) => {
     }
   
     return (
-    <Reveal clase={styles.boxReveal}  width='' >
+    <Reveal clase={styles.boxReveal} >
         <div className={styles.boxImageSkill}>
         <Image
             className={styles.imageSkill}

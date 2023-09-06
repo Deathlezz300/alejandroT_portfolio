@@ -78,7 +78,7 @@
     right: -8%;
     width: 45%;
     height: auto;
-    max-height: 230px;
+    object-fit: cover;
     border-top-left-radius: 10px;
     filter: drop-shadow(0 0 5px #3a3a3a);
     transition: .1s all ease;

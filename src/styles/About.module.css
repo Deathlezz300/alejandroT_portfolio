@@ -187,7 +187,7 @@
     }
 
     .titleDataMe{
-        font-size: clamp(2.1rem,3.5vw,1000px);
+        font-size: clamp(1.8rem,3.5vw,1000px);
         font-weight: 800;
         color: #353849;
         text-align: center;
@@ -197,6 +197,9 @@
         width: 95%;
     }
 
+    .boxDisponible{
+        display: none;
+    }
 }
 
 @keyframes spinner {
