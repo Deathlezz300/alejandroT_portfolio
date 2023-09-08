@@ -29,7 +29,7 @@ export const About = () => {
                         <p className={styles.textDataMe}>Desarrollador Fullstack y estudiante de Ingeniería en Sistemas. 
                         Mi enfoque abarca tanto el desarrollo frontend como backend, 
                         utilizando tecnologías como como React, Node.js y Next.js</p>
-                        <a className={styles.buttonCV} target='_blank' href="https://drive.google.com/file/d/1vh8xN7vvRG-9iMbFcBXNMkDPkJhFAQ9z/view?usp=drive_link">
+                        <a className={styles.buttonCV} target='_blank' href="https://drive.google.com/file/d/1ehiacgXVOP7z4j2PNz9ZxO7O5huQtAJ4/view?usp=drive_link">
                             <DownloadIcon fontSize='small'/>
                             Descargar cv</a>
                 </div>

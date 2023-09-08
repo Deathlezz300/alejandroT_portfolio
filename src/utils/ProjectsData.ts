@@ -51,8 +51,7 @@ export const DataProjects:project[]=[
         tecnologiasFilter:['react','node.js','typescript','tailwind','mongo'
         ,'redux'],
         descripcionCorta:
-        'ChatApp es una aplicación de mensajeria en tiempo real con todos'
-        +' los usuarios regi    strados en el sistema.',
+        'ChatApp es una aplicación de mensajería en tiempo real que permite a todos los usuarios registrados en el sistema mantener conversaciones instantáneas entre ellos. Con ChatApp, los usuarios pueden comunicarse de manera rápida y sencilla con cualquier otro usuario registrado en la plataforma',
         url:'https://chatapp-300.netlify.app/login'
     },
     {
