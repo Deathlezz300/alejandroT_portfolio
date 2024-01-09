@@ -1,0 +1,59 @@
+{
+
+    "header":{
+        "home":"Inicio",
+        "skills":"Habilidades",
+        "projects":"Proyectos",
+        "contact":"Contacto"
+    },
+
+    "about":{
+        "title":"Desarrollador Web",
+        "status":"Disponible para trabajar",
+        "name":"Soy Alejandro Toledo",
+        "description":"Desarrollador Fullstack y estudiante de Ingeniería en Sistemas. Mi enfoque abarca tanto el desarrollo frontend como backend, utilizando tecnologías como como React, Node.js y Next.js"
+        ,"resume":"Descargar CV",
+        "link-resume":"https://drive.google.com/file/d/1CsqtKereyWR74cQYDS2H1R-2eWnghF6r/view?usp=sharing"
+    }
+    
+    ,"projects":
+        {
+            "1": "ChatApp es una aplicación de mensajería en tiempo real que permite a todos los usuarios registrados en el sistema mantener conversaciones instantáneas entre ellos.",
+            "2": "Teslo Shop es un clon de la página de Tesla, donde se pueden realizar todas las acciones disponibles en un e-commerce.",
+            "3": "NewsApp es una página web que permite buscar noticias de los temas que se desee, permitiendo al usuario filtrar la información por idioma.",
+            "4": "CalendarApp permite al usuario crear recordatorios o eventos que tenga pendientes a realizar durante el transcurso del tiempo.",
+            "5": "Pipos y Melosos es una página web para la tienda Pipos y Melosos, donde se evidencian los productos y se pueden modificar, agregar y eliminar.",
+            "6": "JournalApp es una plataforma web para crear notas de manera sencilla y accesible en un solo lugar, compatible con múltiples dispositivos.",
+            "7": "GiftExpertApp permite al usuario realizar búsquedas de gifs con base al parámetro ingresado en el buscador.",
+            "8": "EduvetQuiz es una página web para estudiantes de MVZ, con quizzes sobre conocimientos para repasar diversas temáticas.",
+            "9": "Ecommerce fake es un e-commerce que consume API para la obtención de información. El administrador puede insertar, eliminar y actualizar la información de los productos (CRUD)."
+            ,"data":{
+                "title":"Proyectos",
+                "see":"Ver todos",
+                "titlePage":"Todos los proyectos"
+            }
+        }
+    ,
+    "contact":{
+        "email":{
+            "correct":"Correo enviado!",
+            "error":"Ha ocurrido un error"
+        },
+        "title":"Contacto",
+        "errores":{
+            "nombre":"El nombre es obligatorio",
+            "asunto":"El asunto es obligatorio",
+            "correo1":"El correo es obligatorio",
+            "correo2":"No es un correo valido",
+            "mensaje":"El mensaje es obligatorio",
+            "mensaje2":"Minimo 8 caracteres"
+        },
+        "labels":{
+            "name":"Nombre",
+            "asunto":"Asunto",
+            "correo":"Correo",
+            "mensaje":"Mensaje"
+        },
+        "boton":"Enviar"
+    }
+}

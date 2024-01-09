@@ -5,6 +5,7 @@ import { Reveal } from './Reveal'
 import emailjs from '@emailjs/browser'
 import {toast,ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import { useTranslation } from 'react-i18next'
 
 interface formData{
   name:string,
@@ -14,7 +15,9 @@ interface formData{
 }
 
 export const Contact = () => {
-  
+
+  const [t,int18]=useTranslation("global");
+
   const {register,handleSubmit,formState:{errors},getValues}=useForm<formData>();
 
   const [sending,SetSending]=useState<boolean>(false);
@@ -33,7 +36,7 @@ export const Contact = () => {
 
       await emailjs.send(serviceId,templateId,data as any,publicKey)
       .then(()=>{
-        toast.success('Correo enviado!', {
+        toast.success(t("contact.email.correct"), {
           position: "top-right",
           autoClose: 3000,
           hideProgressBar: false,
@@ -44,7 +47,7 @@ export const Contact = () => {
           theme: "dark",
           });        
       }).catch((error)=>{
-        toast.warn('Ha ocurrido un error', {
+        toast.warn(t("contact.email.error"), {
           position: "top-right",
           autoClose: 3000,
           hideProgressBar: false,
@@ -63,54 +66,54 @@ export const Contact = () => {
   return (
     <section  className={styles.boxSectionContact} id='contacto'>
       <ToastContainer/>
-      <Reveal><h2 className={styles.titleContacto}>Contacto</h2></Reveal>
+      <Reveal><h2 className={styles.titleContacto}>{t("contact.title")}</h2></Reveal>
         <form action="" onSubmit={handleSubmit(onSubmitContact)} className={styles.boxFormContacto}>
             <Reveal padding='7px 3px 3px 3px' width='100%'>
             <div className={styles['input-group']}>
                 
                 <input {...register('name',{
-                  required:'El nombre es obligatorio'
+                  required:t("contact.errores.nombre")
                 })} placeholder=' ' style={{marginBottom:!errors.name ? '.9rem' : ''}} type="text" className={`${styles['input-form']} ${errors.name ? styles.borderRed : ''}`} name="name" />
-                <label className={styles['label-input']}>Nombre</label>
+                <label className={styles['label-input']}>{t("contact.labels.name")}</label>
               
           </div>
           <label className={styles.labelError} style={{display:errors.name ? 'block' : 'none'}} htmlFor="">{errors.name?.message}</label>
           <div className={styles['input-group']}>
               
                 <input {...register('asunto',{
-                  required:'El asunto es obligatorio'
+                  required:t("contact.errores.asunto")
                 })} placeholder=' ' type="text"  style={{marginBottom:!errors.asunto ? '.9rem' : ''}} className={`${styles['input-form']} ${errors.asunto ? styles.borderRed : ''}`}/>
-                <label className={styles['label-input']}>Asunto</label>
+                <label className={styles['label-input']}>{t("contact.labels.asunto")}</label>
               
           </div>
           <label className={styles.labelError} style={{display:errors.asunto ? 'block' : 'none'}} htmlFor="">{errors.asunto?.message}</label>
           <div className={styles['input-group']}>
               
                 <input {...register('correo',{
-                  required:'El correo es obligatorio',
+                  required:t("contact.errores.correo1"),
                   pattern: {
                     value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                    message: "No es un correo valido"
+                    message: t("contact.errores.correo2")
                   }
                 })} placeholder=' ' type="text"  style={{marginBottom:!errors.correo ? '.9rem' : ''}} className={`${styles['input-form']} ${errors.correo ? styles.borderRed : ''}`}/>
-                <label className={styles['label-input']}>Correo</label>
+                <label className={styles['label-input']}>{t("contact.labels.correo")}</label>
               
           </div>
           <label className={styles.labelError} style={{display:errors.correo ? 'block' : 'none'}} htmlFor="">{errors.correo?.message}</label>
           <div className={styles['input-group']}>
               
                 <textarea {...register('mensaje',{
-                  required:'El mensaje es obligatorio',
-                  minLength:{value:8,message:'Minimo 8 caracteres'}
+                  required:t("contact.errores.mensaje"),
+                  minLength:{value:8,message:t("contact.errores.mensaje2")}
                 })} placeholder=' '  style={{marginBottom:!errors.mensaje ? '.9rem' : ''}} className={`${styles['area-form']} ${errors.mensaje ? styles.borderRed : ''}`}></textarea>
-                <label className={styles['label-area']}>Mensaje</label>
+                <label className={styles['label-area']}>{t("contact.labels.mensaje")}</label>
               
           </div>
           <label className={styles.labelError} style={{display:errors.mensaje ? 'block' : 'none'}} htmlFor="">{errors.mensaje?.message}</label>
           
             <div className={styles.boxButton}>
               {
-                sending===false ? <button disabled={sending} className={styles.botonEnviar} type='submit'>Enviar</button>:
+                sending===false ? <button disabled={sending} className={styles.botonEnviar} type='submit'>{t("contact.boton")}</button>:
                 <span className={styles.loader}></span>
               }
             </div>

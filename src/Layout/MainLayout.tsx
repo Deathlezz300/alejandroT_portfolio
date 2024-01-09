@@ -1,8 +1,11 @@
 import { NavBar } from '@/Components/NavBar'
 import Head from 'next/head'
-import React,{FC} from 'react'
+import React,{FC, useEffect} from 'react'
 import { SideBar } from '@/Components/SideBar'
 import logo from '../../public/images/logo_portfolio.png'
+import { useRouter } from 'next/router'
+import { validateLanguage } from '@/utils/validateLanguage'
+import { useTranslation } from 'react-i18next'
 
 interface props{
     title:string,
@@ -14,6 +17,13 @@ const origin=(typeof window==='undefined' ? '' : window.location.origin);
 const fullUrl=(typeof window==='undefined' ? '' : window.location);
 
 export const MainLayout:FC<props> = ({title,description,children}) => {
+
+  const [t,int18]=useTranslation("global");
+
+  useEffect(()=>{
+    const lengua=validateLanguage(window.navigator.language.split("-")[0]);
+    int18.changeLanguage(lengua)
+  },[])
 
   return (
     <>
@@ -38,3 +48,4 @@ export const MainLayout:FC<props> = ({title,description,children}) => {
     </>
   )
 }
+

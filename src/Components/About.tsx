@@ -1,37 +1,42 @@
+
+
 import React from 'react'
 import styles from '../styles/About.module.css';
 import perfil from '../../public/images/profile.webp'
 import Image from 'next/image'
 import DownloadIcon from '@mui/icons-material/Download';
 import { Reveal } from './Reveal';
+import { useTranslation } from 'react-i18next';
 
 export const About = () => {
+
+  const [t,i18n]=useTranslation("global");
+
+
   return (
     <section className={styles.boxSection}>
         <div className={styles.boxHeadAbout}>
             <Reveal>
             <div className={styles.boxTitleWeb}>
                 <span className={styles.circle1}></span>
-                <h2 className={styles.titleWebDeveloper}>Desarrollador Web</h2>
+                <h2 className={styles.titleWebDeveloper}>{t("about.title")}</h2>
             </div>
             </Reveal>
             <Reveal>
                 <div className={styles.boxDisponible}>
                         <span className={styles.circle2}></span>
-                        <span className={styles.titleTrabajo}>Disponible para trabajar</span>
+                        <span className={styles.titleTrabajo}>{t("about.status")}</span>
                 </div>
             </Reveal>
         </div>
         <div className={styles.boxInfoMe}>
             <Reveal width='52%' clase={`${styles.cambiarUbi}`}>
                 <div className={styles.boxDataMe}>
-                        <h1 className={styles.titleDataMe}>Soy Alejandro Toledo</h1>
-                        <p className={styles.textDataMe}>Desarrollador Fullstack y estudiante de Ingeniería en Sistemas. 
-                        Mi enfoque abarca tanto el desarrollo frontend como backend, 
-                        utilizando tecnologías como como React, Node.js y Next.js</p>
-                        <a className={styles.buttonCV} target='_blank' href="https://drive.google.com/file/d/14U4xEQwjN6mibVfNQUIcwU2CiYt98jNH/view?usp=drive_link">
+                        <h1 className={styles.titleDataMe}>{t("about.name")}</h1>
+                        <p className={styles.textDataMe}>{t("about.description")}</p>
+                        <a className={styles.buttonCV} target='_blank' href={t("about.link-resume")}>
                             <DownloadIcon fontSize='small'/>
-                            Descargar cv</a>
+                            {t("about.resume")}</a>
                 </div>
             </Reveal>
             <Reveal clase={`${styles.boxRevealImagen}`}>

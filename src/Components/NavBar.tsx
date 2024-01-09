@@ -10,8 +10,11 @@ import { Reveal } from './Reveal';
 import { MenuButton } from './MenuButton';
 import { useSelector } from 'react-redux';
 import { RootState } from '@/store/store';
+import { useTranslation } from 'react-i18next';
 
 export const NavBar = () => {
+
+  const [t,in18]=useTranslation("global");
 
   const {showMenu}=useSelector((state:RootState)=>state.main);
 
@@ -32,28 +35,28 @@ export const NavBar = () => {
             <Link className={styles['box-link']}  href='/' color='none'>
                 <div className={styles.boxTextLink}>
                     <Reveal>
-                        <span className={styles.textLink}>Home</span>
+                        <span className={styles.textLink}>{t("header.home")}</span>
                     </Reveal>
                 </div>
             </Link>
             <Link className={styles['box-link']} href='#skills'>
                 <div className={styles.boxTextLink}>
                     <Reveal>
-                        <span className={styles.textLink}>Skills</span>
+                        <span className={styles.textLink}>{t("header.skills")}</span>
                     </Reveal>
                 </div>
             </Link>
             <Link className={styles['box-link']} href='/projects'>
                 <div className={styles.boxTextLink}>
                     <Reveal>
-                        <span className={styles.textLink}>Proyectos</span>
+                        <span className={styles.textLink}>{t("header.projects")}</span>
                     </Reveal>
                 </div>
             </Link>
             <Link className={styles['box-link']} href='/#contacto'>
                 <div className={styles.boxTextLink}>
                     <Reveal>
-                        <span className={styles.textLink}>Contacto</span>
+                        <span className={styles.textLink}>{t("header.contact")}</span>
                     </Reveal>
                 </div>
             </Link>

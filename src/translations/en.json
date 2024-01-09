@@ -1,0 +1,60 @@
+{
+
+    "header":{
+        "home":"Home",
+        "skills":"Skills",
+        "projects":"Projects",
+        "contact":"Contact"
+    },
+
+    "about":{
+        "title":"Web Developer",
+        "status":"Available for work",
+        "name":"I'm Alejandro Toledo",
+        "description":"Fullstack developer and Systems Engineering student. My focus covers both frontend and backend development, using technologies such as React, Node.js and Next.js."
+        ,"resume":"Download CV",
+        "link-resume":"https://drive.google.com/file/d/1Nm0AnDjdmi0Np40SMOzky_1xiygkjBSl/view?usp=sharing"
+    },
+    "projects":
+    {
+        "1": "ChatApp is a real-time messaging application that allows all registered users in the system to have instant conversations with each other.",
+        "2": "Teslo Shop is a clone of the Tesla website, where users can perform all available actions in an e-commerce.",
+        "3": "NewsApp is a web page that allows users to search for news on desired topics, allowing the user to filter information by language.",
+        "4": "CalendarApp allows the user to create reminders or events to be completed over time.",
+        "5": "Pipos y Melosos is a website for the Pipos y Melosos store, where products are showcased, and users can modify, add, and delete them.",
+        "6": "JournalApp is a web platform for creating notes easily and accessibly in one place. Compatible with multiple devices, allowing easy access from anywhere.",
+        "7": "GiftExpertApp allows users to search for gifs based on the entered parameter in the search bar.",
+        "8": "EduvetQuiz is a website for veterinary students, featuring quizzes on various topics and options to select the quiz to take.",
+        "9": "Ecommerce fake is an e-commerce that consumes API for obtaining information. The administrator can insert, delete, and update product information (CRUD)."
+        ,"data":{
+            "title":"Projects",
+            "see":"See all",
+            "titlePage":"All projects"
+        }
+    },
+    "contact":
+    {
+        "email": {
+          "correct": "Email sent !",
+          "error": "An error occurred"
+        },
+        "title": "Contact",
+        "errores": {
+          "nombre": "Name is required",
+          "asunto": "Subject is required",
+          "correo1": "Email is required",
+          "correo2": "Not a valid email",
+          "mensaje": "Message is required",
+          "mensaje2": "Minimum 8 characters"
+        },
+        "labels": {
+          "name": "Name",
+          "asunto": "Subject",
+          "correo": "Email",
+          "mensaje": "Message"
+        },
+        "boton": "Send"
+      }
+      
+    
+}

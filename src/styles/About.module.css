@@ -131,23 +131,7 @@
     margin-top: .5rem;
 }
 
-.buttonCV::after{
-    content: '';
-    position: absolute;
-    left: -2.5%;
-    border-radius: 10px;
-    width: 102%;
-    height: 105%;
-    border: 2px solid black;
-    top: -7%;
-    transition: .3s all ease-in-out;
-    transform-origin: center;
-    transform: scale(0);
-}
 
-.buttonCV:hover::after{
-    transform: scale(1);
-}
 
 
 .perfilImage{

@@ -9,6 +9,7 @@ import { useSelector } from 'react-redux';
 import { RootState } from '@/store/store';
 import { toogleMenu } from '@/store/MainSlice';
 import { useDispatch } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
 export const SideBar = () => {
 
@@ -17,27 +18,29 @@ export const SideBar = () => {
 
   const {showMenu}=useSelector((state:RootState)=>state.main);
 
+  const [t,int18]=useTranslation("global");
+
   return (
     <section className={`${styles.boxSectionSide} ${showMenu ? styles.boxSectionSideCambiar : ''}`}>
             <div className={styles.boxSideLinks}>
                 <Link onClick={()=>dispatch(toogleMenu())} className={styles['box-link']}  href='/' color='none'>
                         <Reveal>
-                            <span className={styles.textLinkSide}>Home</span>
+                            <span className={styles.textLinkSide}>{t("header.home")}</span>
                         </Reveal>
                 </Link>
                 <Link onClick={()=>dispatch(toogleMenu())} className={styles['box-link']} href='#skills'>
                         <Reveal>
-                            <span className={styles.textLinkSide}>Skills</span>
+                            <span className={styles.textLinkSide}>{t("header.skills")}</span>
                         </Reveal>
                 </Link>
                 <Link onClick={()=>dispatch(toogleMenu())} className={styles['box-link']} href='/projects'>
                         <Reveal>
-                            <span className={styles.textLinkSide}>Proyectos</span>
+                            <span className={styles.textLinkSide}>{t("header.projects")}</span>
                         </Reveal>
                 </Link>
                 <Link onClick={()=>dispatch(toogleMenu())} className={styles['box-link']} href='/#contacto'>
                         <Reveal>
-                            <span className={styles.textLinkSide}>Contacto</span>
+                            <span className={styles.textLinkSide}>{t("header.contact")}</span>
                         </Reveal>
                 </Link>
             </div>
