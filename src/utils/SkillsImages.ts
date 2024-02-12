@@ -9,6 +9,8 @@ import css from '../../public/images/css.webp'
 import mysql from '../../public/images/mysql.webp';
 import {StaticImageData} from 'next/image'
 import firebase from '../../public/images/firebase.webp'
+import nest from '../../public/images/nest.webp';
+import angular from '../../public/images/angular.webp';
 
 interface imageData{
     image: StaticImageData,
@@ -60,6 +62,16 @@ export const SkillsImages:imageData[]=[
         image:mysql,
         color:'#4478A2',
         texto:'MySQL'
+    },
+    {
+        image:nest,
+        color:'#e62929',
+        texto:'Nest'
+    },
+    {
+        image:angular,
+        color:'#e62929',
+        texto:'Angular'
     }
 ]
 
