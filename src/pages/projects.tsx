@@ -12,6 +12,7 @@ import { useTranslation } from 'react-i18next';
 
 let SkillsImage2=[...SkillsImages]
 SkillsImage2.pop()
+SkillsImage2.pop()
 SkillsImage2.push(firebaseD)
 
  const ProjectsPage:NextPage = () => {
@@ -24,7 +25,6 @@ SkillsImage2.push(firebaseD)
     <MainLayout title='Proyectos' description='Proyectos portafolio web Alejandro Toledo'>
         <section className={styles.boxSectionProjectPage}>
             <h1 className={styles.titleProjectsPage}>{t("projects.data.titlePage")}</h1>
-            {/* <h3 className={styles.subtitleProjectsPage}>Filtrar por tecnologia</h3> */}
             <div className={styles.boxTecnologiasProjectPage}>
                 {
                     SkillsImage2.map(skill=>{

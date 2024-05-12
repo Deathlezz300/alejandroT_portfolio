@@ -39,7 +39,7 @@ export const NavBar = () => {
                     </Reveal>
                 </div>
             </Link>
-            <Link className={styles['box-link']} href='#skills'>
+            <Link className={styles['box-link']} href='/#skills'>
                 <div className={styles.boxTextLink}>
                     <Reveal>
                         <span className={styles.textLink}>{t("header.skills")}</span>
