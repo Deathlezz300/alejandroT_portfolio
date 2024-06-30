@@ -1,6 +1,6 @@
 .boxProjectCard{
     width: fit-content;
-    max-width: 900px;   
+    max-width: 1300px;   
     display: flex;
     gap: 10px;
     padding-top: 2rem;
@@ -96,7 +96,7 @@
 
 .titleProjectPart{
     color: #353849;
-    font-size: 1.6vw;
+    font-size: 1.2vw;
     width: 100%;
     text-align: left;
 }
@@ -104,12 +104,12 @@
 .descriptionProjectPart{
     font-weight: 400;
     color: #535353;
-    font-size: clamp(1rem,1.3vw,1000px);
+    font-size: clamp(1rem,1.1vw,1000px);
 }
 
 .titleProjectPart2{
     color: #353849;
-    font-size: clamp(1.5rem,1.4vw,2rem);
+    font-size: clamp(1.5rem,1vw,2rem);
     width: 92%;
     text-align: left;
 }
@@ -118,7 +118,7 @@
     width: 92%;
     font-weight: 400;
     color: #535353;
-    font-size: clamp(1.1rem,1.3vw,1.8rem);
+    font-size: clamp(1.1rem,.8vw,1.8rem);
 }
 
 @media screen and (max-width:768px) {

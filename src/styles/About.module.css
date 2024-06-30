@@ -84,7 +84,7 @@
 
 .titleDataMe{
     width: 100%;
-    font-size: clamp(2.1rem,3.5vw,1000px);
+    font-size: clamp(2.1rem,2.3vw,1000px);
     font-weight: 800;
     color: #353849;
     text-align: left;
@@ -94,7 +94,7 @@
     text-align: justify;
     font-weight: 400;
     color: #535353;
-    font-size: clamp(1rem,1.3vw,1000px);
+    font-size: clamp(1rem,1.1vw,1000px);
     line-height: clamp(25px,2vw,1000px);
 }
 

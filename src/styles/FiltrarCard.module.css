@@ -11,7 +11,7 @@
 }
 
 .imagenFiltrar{
-    width: clamp(50px,4vw,1000px);
+    width: clamp(50px,3vw,1000px);
     height: auto;
 }
 

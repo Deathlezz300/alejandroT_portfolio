@@ -17,7 +17,7 @@
     row-gap: 30px;
     column-gap: 30px;
     place-content: center;
-    grid-template-columns: repeat(auto-fit,minmax(700px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(900px,1fr));
 }
 
 .boxEnlaceTodos{
@@ -70,6 +70,14 @@
 }
 
 
+
+@media screen and (max-width:968px){
+    .boxGridProjects{
+        max-width: 90%;
+        width: fit-content;
+        grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
+    }
+}
 
 @media screen and (max-width:768px){
     .boxGridProjects{
